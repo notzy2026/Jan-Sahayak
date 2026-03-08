@@ -31,7 +31,7 @@ const AppRoutes = () => {
     console.log(`[GA Event] page_view: ${location.pathname}`);
   }, [location]);
 
-  // Check if we have answers for the results page
+  // Check if we have answers for the results page (used for display only, no longer a redirect guard)
   const hasAnswers = state && occupation && age
 
   return (
@@ -54,10 +54,9 @@ const AppRoutes = () => {
             
             <Route path="/conversation" element={<ConversationPage />} />
             
-            {/* Results page requires answers */}
             <Route 
               path="/results" 
-              element={hasAnswers ? <Results /> : <Navigate to="/questions" replace />} 
+              element={<Results />} 
             />
             
             <Route path="/apply/:schemeId" element={<ApplyFlow />} />

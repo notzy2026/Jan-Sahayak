@@ -11,20 +11,24 @@ import { generateResultsSummaryPDF, downloadPDF } from '../utils/pdfgen'
 // ── Simple eligibility filter ─────────────────────────────────────────────────
 // For demo we pick schemes based on q2 (occupation) with sensible defaults
 const filterSchemes = (answers) => {
-  if (!answers || !answers.occupation) return MOCK_SCHEMES.slice(0, 5)
+  if (!answers) return MOCK_SCHEMES.slice(0, 6)
 
-  const occ = answers.occupation
+  // Support both old (q2) and new (occupation) answer key formats
+  const occ = answers.occupation || answers.q2
+
+  if (!occ) return MOCK_SCHEMES.slice(0, 6)
+
   let filtered = [...MOCK_SCHEMES]
 
   // Occupation-based relevance boost (put matching first)
   const TOP_OCC = {
-    farmer:    ['pm-kisan', 'pmfby', 'kcc'],
-    worker:    ['mudra', 'pm-awas'],
-    student:   ['scholarship-pre-matric'],
-    business:  ['mudra'],
-    disabled:  ['udid'],
-    pensioner: ['ayushman'],
-    women:     ['pm-awas', 'mudra'],
+    farmer:    ['PM-KISAN', 'PMFBY'],
+    worker:    ['MGNREGA', 'PMKVY'],
+    student:   ['PMKVY'],
+    business:  ['MUDRA', 'PMEGP'],
+    disabled:  ['AYUSHMAN'],
+    pensioner: ['AYUSHMAN'],
+    women:     ['PMMVY', 'SSY'],
     other:     [],
   }
 
@@ -37,16 +41,16 @@ const filterSchemes = (answers) => {
     return b.benefit - a.benefit
   })
 
-  // Everyone always gets Ayushman Bharat (health) unless already topmost
-  if (!topIds.includes('ayushman')) {
-    const idx = filtered.findIndex((s) => s.id === 'ayushman')
+  // Everyone always gets Ayushman Bharat (health) — insert at position 2 if not already top
+  if (!topIds.includes('AYUSHMAN')) {
+    const idx = filtered.findIndex((s) => s.id === 'AYUSHMAN')
     if (idx > 2) {
       const [item] = filtered.splice(idx, 1)
       filtered.splice(2, 0, item)
     }
   }
 
-  return filtered.slice(0, 6); // show max 6
+  return filtered.slice(0, 6);
 }
 
 // ── Results Page ──────────────────────────────────────────────────────────────

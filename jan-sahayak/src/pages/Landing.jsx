@@ -3,8 +3,6 @@ import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import LanguageBar from '../components/LanguageBar/LanguageBar'
 import AnimatedAvatar from '../components/Avatar/AnimatedAvatar'
-import VoiceInput from '../components/VoiceInput/VoiceInput'
-import useUserStore from '../store/userStore'
 
 // ── IVR Modal ─────────────────────────────────────────────────────────────────
 const IVRModal = ({ onClose }) => (
@@ -75,7 +73,7 @@ const KeyboardOverlay = ({ onClose, onSubmit }) => {
           rows={3}
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder="e.g. I am a farmer, age 45 from UP with 2 bigha land..."
+          placeholder="e.g. I want to know about disability pension..."
           className="w-full border-2 border-gray-200 rounded-xl p-3 text-base resize-none focus:outline-none focus:border-[#FF6B00] transition-colors"
         />
         <div className="flex gap-3">
@@ -96,28 +94,6 @@ const KeyboardOverlay = ({ onClose, onSubmit }) => {
     </div>
   )
 }
-
-// ── Smart Demo Voice Modal ────────────────────────────────────────────────────
-const SmartVoiceModal = ({ onClose, onTranscript, language }) => (
-  <div 
-    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
-    onClick={onClose}
-  >
-    <div 
-      className="bg-white rounded-3xl shadow-2xl p-8 flex flex-col items-center gap-6 max-w-sm w-full mx-4"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <div className="w-full flex justify-between items-center mb-2">
-        <h3 className="font-bold text-gray-800">बोल कर बताएं...</h3>
-        <button onClick={onClose} className="text-gray-400 hover:text-gray-700 font-bold text-xl">×</button>
-      </div>
-      <VoiceInput language={language} onTranscript={onTranscript} />
-      <p className="text-sm text-center text-gray-500 mt-2 italic px-4">
-        उदा: "मैं एक किसान हूं, मेरी उम्र 45 साल है, मेरे पास 2 बीघा जमीन है, और मेरी आय 1 लाख से कम है।"
-      </p>
-    </div>
-  </div>
-)
 
 // ── How It Works Accordion ────────────────────────────────────────────────────
 const HOW_IT_WORKS_STEPS = [
@@ -159,58 +135,15 @@ const HowItWorks = ({ label }) => {
 
 // ── Landing Page ──────────────────────────────────────────────────────────────
 const Landing = () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const navigate = useNavigate()
-  const { setAnswer, resetAll } = useUserStore()
 
   const [showIVR, setShowIVR]         = useState(false)
   const [showSMS, setShowSMS]         = useState(false)
   const [showKeyboard, setShowKeyboard] = useState(false)
-  const [showSmartVoice, setShowSmartVoice] = useState(false)
 
-  const handleVoiceStart = () => setShowSmartVoice(true)
-
-  // Demo Smart Parser function (Skips Questions.jsx entirely)
-  const handleSmartTranscript = (text) => {
-    setShowSmartVoice(false)
-    const lower = text.toLowerCase()
-    resetAll()
-
-    // Base defaults
-    setAnswer('state', 'UP')
-    setAnswer('occupation', 'other')
-    setAnswer('income', 'lt1')
-    setAnswer('land', 0)
-    setAnswer('age', 30)
-    setAnswer('familySize', 4)
-
-    // Parse occupation
-    if (lower.includes('kisan') || lower.includes('farmer') || lower.includes('किसान') || lower.includes('kheti')) {
-      setAnswer('occupation', 'farmer')
-    } else if (lower.includes('business') || lower.includes('vyapar') || lower.includes('दुकान')) {
-      setAnswer('occupation', 'business')
-    } else if (lower.includes('student') || lower.includes('vidyarthi') || lower.includes('छात्र')) {
-      setAnswer('occupation', 'student')
-    } else if (lower.includes('mahila') || lower.includes('women') || lower.includes('महिला') || lower.includes('pregnant')) {
-      setAnswer('occupation', 'women')
-    }
-
-    // Parse numbers (age, land)
-    // simplistic greedy number extraction
-    const numbers = text.match(/\d+/g)
-    if (numbers) {
-      numbers.forEach(numStr => {
-        const n = parseInt(numStr, 10)
-        if (n >= 18 && n <= 80) setAnswer('age', n) // Treat numbers 18-80 as age
-        else if (n > 0 && n <= 10) setAnswer('land', n) // Treat small numbers 1-10 as land/family
-      })
-    }
-    
-    // Jump straight to results
-    navigate('/results')
-  }
-
-  const handleTypeSubmit = (text) => handleSmartTranscript(text)
+  const handleVoiceStart = () => navigate('/questions')
+  const handleTypeSubmit = (text) => navigate('/questions', { state: { prefillText: text } })
 
   return (
     <div
@@ -376,13 +309,6 @@ const Landing = () => {
       {/* ── Modals ── */}
       {showIVR      && <IVRModal      onClose={() => setShowIVR(false)} />}
       {showSMS      && <SMSModal      onClose={() => setShowSMS(false)} />}
-      {showSmartVoice && (
-        <SmartVoiceModal
-          language={i18n.language}
-          onClose={() => setShowSmartVoice(false)}
-          onTranscript={handleSmartTranscript}
-        />
-      )}
       {showKeyboard && (
         <KeyboardOverlay
           onClose={() => setShowKeyboard(false)}
