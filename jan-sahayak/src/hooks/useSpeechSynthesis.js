@@ -55,9 +55,13 @@ export const useSpeechSynthesis = (language = 'en') => {
   // Speak text with language-specific voice
   const speak = useCallback((text, onStart, onEnd, onBoundary) => {
     if (!text) return
+    if (!('speechSynthesis' in window)) {
+      if (onEnd) onEnd()
+      return
+    }
 
     // Cancel any ongoing speech
-    window.speechSynthesis.cancel()
+    try { window.speechSynthesis.cancel() } catch(e) { /* ignore */ }
 
     const utterance = new SpeechSynthesisUtterance(text)
     const voice = getVoiceForLanguage(language)
@@ -100,7 +104,13 @@ export const useSpeechSynthesis = (language = 'en') => {
       }
     }
 
-    window.speechSynthesis.speak(utterance)
+    try {
+      window.speechSynthesis.speak(utterance)
+    } catch (e) {
+      console.warn('[Speech] speak() failed:', e)
+      setIsSpeaking(false)
+      if (onEnd) onEnd()
+    }
   }, [language, getVoiceForLanguage])
 
   // Pause speech

@@ -10,11 +10,21 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>,
 )
 
-// Register Service Worker for PWA
+// Service Worker: UNREGISTER in dev to prevent stale cache issues.
+// In production, you would register '/sw.js' instead.
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch((error) => {
-      console.log('SW Registration failed: ', error);
-    });
-  });
+  // Unregister all existing service workers to clear stale cache
+  navigator.serviceWorker.getRegistrations().then((registrations) => {
+    for (const registration of registrations) {
+      registration.unregister()
+      console.log('[SW] Unregistered stale service worker')
+    }
+  })
+  // Also clear all caches
+  if ('caches' in window) {
+    caches.keys().then((names) => {
+      names.forEach((name) => caches.delete(name))
+    })
+    console.log('[SW] Cleared all caches')
+  }
 }

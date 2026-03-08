@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import LanguageSelectionPage from './pages/LanguageSelectionPage'
@@ -14,6 +14,38 @@ import LanguageBar from './components/LanguageBar/LanguageBar'
 import FontSizeToggle from './components/FontSizeToggle/FontSizeToggle'
 import useUserStore from './store/userStore'
 import { RAMU_DEMO } from './data/demoFlow'
+
+// ── Error Boundary ──────────────────────────────────────────────────────────
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { hasError: false, error: null }
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error }
+  }
+  componentDidCatch(error, info) {
+    console.error('[Jan-Sahayak] Caught render error:', error, info)
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{ padding: 32, textAlign: 'center', fontFamily: 'sans-serif' }}>
+          <div style={{ fontSize: 48 }}>🔧</div>
+          <h2 style={{ color: '#FF6B00', marginBottom: 8 }}>Oops! Something went wrong.</h2>
+          <p style={{ color: '#666', marginBottom: 16 }}>{this.state.error?.message}</p>
+          <button
+            onClick={() => { this.setState({ hasError: false }); window.location.href = '/landing' }}
+            style={{ padding: '12px 24px', background: '#FF6B00', color: '#fff', border: 'none', borderRadius: 12, cursor: 'pointer', fontWeight: 700 }}
+          >
+            🏠 Go to Home
+          </button>
+        </div>
+      )
+    }
+    return this.props.children
+  }
+}
 
 // Inner component to handle routes that need location
 const AppRoutes = () => {
@@ -41,7 +73,7 @@ const AppRoutes = () => {
           <Routes location={location}>
             <Route
               path="/"
-              element={hasSelectedLanguage ? <Navigate to="/landing" replace /> : <LanguageSelectionPage />}
+              element={<Navigate to="/landing" replace />}
             />
             <Route path="/landing" element={<Landing />} />
             <Route path="/home" element={<HomePage />} />
@@ -155,7 +187,9 @@ function App() {
 
         {/* Global Layout Wrapper with Content Area */}
         <div className="flex-1 w-full pt-16 relative overflow-x-hidden">
-          <AppRoutes />
+          <ErrorBoundary>
+            <AppRoutes />
+          </ErrorBoundary>
         </div>
 
         {/* Bottom Nav Appears Here (Mobile Only) */}
