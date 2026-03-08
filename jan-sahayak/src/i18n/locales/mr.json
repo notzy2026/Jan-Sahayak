@@ -1,0 +1,58 @@
+{
+  "app": { "title": "जन-सहायक", "tagline": "तुमचा कल्याण साथीदार" },
+  "landing": {
+    "greeting": "नमस्कार! मी जन-सहायक आहे. तुम्हाला काय मदत हवी आहे?",
+    "speak": "बोला",
+    "type": "किंवा टाइप करा",
+    "callIVR": "कॉल करा",
+    "whatsapp": "WhatsApp",
+    "sms": "SMS",
+    "howItWorks": "हे कसे काम करते?"
+  },
+  "questions": {
+    "back": "← मागे",
+    "next": "पुढे →",
+    "loading": "तुमच्यासाठी योजना शोधत आहोत...",
+    "step1Label": "ठिकाण", "step2Label": "काम", "step3Label": "उत्पन्न", "step4Label": "जमीन", "step5Label": "कुटुंब",
+    "q1": { "question": "तुम्ही कुठे राहता? तुमचे राज्य सांगा." },
+    "q2": {
+      "question": "तुम्ही काय काम करता?",
+      "farmer": "शेतकरी", "worker": "कामगार", "student": "विद्यार्थी",
+      "business": "व्यापारी", "women": "महिला गट", "disabled": "दिव्यांग",
+      "pensioner": "निवृत्तीवेतनधारक", "other": "इतर"
+    },
+    "q3": {
+      "question": "तुमच्या घरात वर्षभरात किती पैसे येतात?",
+      "none": "कोणतेही उत्पन्न नाही",
+      "lt1": "₹1 लाखापेक्षा कमी", "1to3": "₹1 लाख – ₹3 लाख", "gt3": "₹3 लाखांपेक्षा जास्त"
+    },
+    "q4": { "question": "तुमच्याकडे किती जमीन आहे?", "label": "एकरात जमीन" },
+    "q5": { "question": "तुमचे वय किती आहे? घरात किती लोक आहेत?", "age": "वय", "members": "कुटुंबातील सदस्य", "submit": "योजना शोधा" }
+  },
+  "results": {
+    "headline": "तुम्ही {{count}} योजनांसाठी पात्र आहात!",
+    "applyNow": "आत्ताच अर्ज करा",
+    "howToGet": "कसे मिळवायचे",
+    "shareWhatsApp": "WhatsApp वर शेअर करा",
+    "downloadPDF": "PDF डाउनलोड करा",
+    "share": "WhatsApp वर शेअर करा",
+    "download": "PDF डाउनलोड करा",
+    "online": "आत्ताच अर्ज करा",
+    "offline": "कसे मिळवायचे",
+    "required_docs": "आवश्यक कागदपत्रे",
+    "steps": "अर्ज कसा करायचा",
+    "portal": "अधिकृत पोर्टल उघडा",
+    "csc": "जवळचे CSC केंद्र",
+    "helpline": "हेल्पलाइन"
+  },
+  "nav": { "back": "मागे", "next": "पुढे", "replay": "पुन्हा ऐका" },
+  "languages": {
+    "en": "English", "hi": "हिंदी", "gu": "ગુજરાતી", "kn": "ಕನ್ನಡ",
+    "bn": "বাংলা", "ta": "தமிழ்", "te": "తెలుగు", "mr": "मराठी",
+    "ml": "മലയാളം", "pa": "ਪੰਜਾਬੀ", "or": "ଓଡ଼ିଆ"
+  },
+  "footer": { "whatsapp": "WhatsApp", "tollfree": "टोल-फ्री", "privacy": "तुमचा डेटा सुरक्षित आहे" },
+  "greeting": { "welcome": "नमस्कार! जन-सहायकमध्ये आपले स्वागत आहे." },
+  "conversation": { "placeholder": "तुमचा संदेश टाइप करा...", "goBack": "मागे", "repeat": "पुन्हा", "help": "मदत", "processing": "शोधत आहोत...", "understood": "समजले!", "yourQuery": "तुमचा प्रश्न" },
+  "voiceInput": { "speakIntoMicrophone": "मायक्रोफोनमध्ये बोला...", "clickMicToStart": "मायक दाबा", "microphoneBlocked": "मायक ब्लॉक आहे", "fallbackToKeyboard": "कीबोर्ड वापरा" }
+}

@@ -1,0 +1,58 @@
+{
+  "app": { "title": "ਜਨ-ਸਹਾਇਕ", "tagline": "ਤੁਹਾਡਾ ਭਲਾਈ ਸਾਥੀ" },
+  "landing": {
+    "greeting": "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ! ਮੈਂ ਜਨ-ਸਹਾਇਕ ਹਾਂ। ਤੁਹਾਡੀ ਕੀ ਮਦਦ ਕਰ ਸਕਦਾ ਹਾਂ?",
+    "speak": "ਗੱਲ ਕਰੋ",
+    "type": "ਜਾਂ ਟਾਈਪ ਕਰੋ",
+    "callIVR": "ਕਾਲ ਕਰੋ",
+    "whatsapp": "WhatsApp",
+    "sms": "SMS",
+    "howItWorks": "ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ?"
+  },
+  "questions": {
+    "back": "← ਪਿੱਛੇ",
+    "next": "ਅੱਗੇ →",
+    "loading": "ਤੁਹਾਡੇ ਲਈ ਯੋਜਨਾਵਾਂ ਲੱਭ ਰਹੇ ਹਾਂ...",
+    "step1Label": "ਥਾਂ", "step2Label": "ਕੰਮ", "step3Label": "ਆਮਦਨ", "step4Label": "ਜ਼ਮੀਨ", "step5Label": "ਪਰਿਵਾਰ",
+    "q1": { "question": "ਤੁਸੀਂ ਕਿੱਥੇ ਰਹਿੰਦੇ ਹੋ? ਆਪਣਾ ਰਾਜ ਦੱਸੋ।" },
+    "q2": {
+      "question": "ਤੁਸੀਂ ਕੀ ਕੰਮ ਕਰਦੇ ਹੋ?",
+      "farmer": "ਕਿਸਾਨ", "worker": "ਮਜ਼ਦੂਰ", "student": "ਵਿਦਿਆਰਥੀ",
+      "business": "ਵਪਾਰੀ", "women": "ਮਹਿਲਾ ਸਮੂਹ", "disabled": "ਅਪੰਗ",
+      "pensioner": "ਪੈਨਸ਼ਨਰ", "other": "ਹੋਰ"
+    },
+    "q3": {
+      "question": "ਤੁਹਾਡੇ ਘਰ ਵਿੱਚ ਸਾਲ ਭਰ ਕਿੰਨੇ ਪੈਸੇ ਆਉਂਦੇ ਹਨ?",
+      "none": "ਕੋਈ ਆਮਦਨ ਨਹੀਂ",
+      "lt1": "₹1 ਲੱਖ ਤੋਂ ਘੱਟ", "1to3": "₹1 – ₹3 ਲੱਖ", "gt3": "₹3 ਲੱਖ ਤੋਂ ਵੱਧ"
+    },
+    "q4": { "question": "ਤੁਹਾਡੇ ਕੋਲ ਕਿੰਨੀ ਜ਼ਮੀਨ ਹੈ?", "label": "ਏਕੜ ਵਿੱਚ ਜ਼ਮੀਨ" },
+    "q5": { "question": "ਤੁਹਾਡੀ ਉਮਰ ਕਿੰਨੀ ਹੈ? ਘਰ ਵਿੱਚ ਕਿੰਨੇ ਲੋਕ ਹਨ?", "age": "ਉਮਰ", "members": "ਪਰਿਵਾਰਕ ਮੈਂਬਰ", "submit": "ਯੋਜਨਾਵਾਂ ਲੱਭੋ" }
+  },
+  "results": {
+    "headline": "ਤੁਸੀਂ {{count}} ਯੋਜਨਾਵਾਂ ਲਈ ਯੋਗ ਹੋ!",
+    "applyNow": "ਹੁਣੇ ਅਰਜ਼ੀ ਦਿਓ",
+    "howToGet": "ਕਿਵੇਂ ਮਿਲੇਗਾ",
+    "shareWhatsApp": "WhatsApp 'ਤੇ ਸਾਂਝਾ ਕਰੋ",
+    "downloadPDF": "PDF ਡਾਊਨਲੋਡ ਕਰੋ",
+    "share": "WhatsApp 'ਤੇ ਸਾਂਝਾ ਕਰੋ",
+    "download": "PDF ਡਾਊਨਲੋਡ ਕਰੋ",
+    "online": "ਹੁਣੇ ਅਰਜ਼ੀ ਦਿਓ",
+    "offline": "ਕਿਵੇਂ ਮਿਲੇਗਾ",
+    "required_docs": "ਲੋੜੀਂਦੇ ਦਸਤਾਵੇਜ਼",
+    "steps": "ਅਰਜ਼ੀ ਕਿਵੇਂ ਦੇਣੀ ਹੈ",
+    "portal": "ਸਰਕਾਰੀ ਪੋਰਟਲ ਖੋਲ੍ਹੋ",
+    "csc": "ਨੇੜੇ CSC ਕੇਂਦਰ",
+    "helpline": "ਹੈਲਪਲਾਈਨ"
+  },
+  "nav": { "back": "ਪਿੱਛੇ", "next": "ਅੱਗੇ", "replay": "ਦੁਬਾਰਾ ਸੁਣੋ" },
+  "languages": {
+    "en": "English", "hi": "हिंदी", "gu": "ગુજરાતી", "kn": "ಕನ್ನಡ",
+    "bn": "বাংলা", "ta": "தமிழ்", "te": "తెలుగు", "mr": "मराठी",
+    "ml": "മലയാളം", "pa": "ਪੰਜਾਬੀ", "or": "ଓଡ଼ିଆ"
+  },
+  "footer": { "whatsapp": "WhatsApp", "tollfree": "ਟੋਲ-ਫ੍ਰੀ", "privacy": "ਤੁਹਾਡਾ ਡੇਟਾ ਸੁਰੱਖਿਅਤ ਹੈ" },
+  "greeting": { "welcome": "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ! ਜਨ-ਸਹਾਇਕ ਵਿੱਚ ਤੁਹਾਡਾ ਸੁਆਗਤ ਹੈ।" },
+  "conversation": { "placeholder": "ਆਪਣਾ ਸੁਨੇਹਾ ਟਾਈਪ ਕਰੋ...", "goBack": "ਪਿੱਛੇ", "repeat": "ਦੁਬਾਰਾ", "help": "ਮਦਦ", "processing": "ਲੱਭ ਰਹੇ ਹਾਂ...", "understood": "ਸਮਝ ਗਿਆ!", "yourQuery": "ਤੁਹਾਡਾ ਸਵਾਲ" },
+  "voiceInput": { "speakIntoMicrophone": "ਮਾਈਕ ਵਿੱਚ ਬੋਲੋ...", "clickMicToStart": "ਮਾਈਕ ਦਬਾਓ", "microphoneBlocked": "ਮਾਈਕ ਬਲੌਕ ਹੈ", "fallbackToKeyboard": "ਕੀਬੋਰਡ ਵਰਤੋ" }
+}

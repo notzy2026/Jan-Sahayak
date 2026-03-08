@@ -1,0 +1,124 @@
+{
+  "app": {
+    "title": "Jan-Sahayak",
+    "tagline": "Your Welfare Companion"
+  },
+  "home": {
+    "welcome": "Welcome to Jan-Sahayak",
+    "subtitle": "Discover welfare schemes and generate application forms through voice or text",
+    "startVoice": "Start with Voice",
+    "startText": "Start with Text"
+  },
+  "sectors": {
+    "disability": {
+      "title": "Disability Support",
+      "description": "UDID, Pensions, Assistive Devices"
+    },
+    "women": {
+      "title": "Women Empowerment",
+      "description": "Maternity, Safety, Entrepreneurship"
+    },
+    "health": {
+      "title": "Health Support",
+      "description": "Ayushman Bharat, Medical Assistance"
+    },
+    "education": {
+      "title": "Education Scholarships",
+      "description": "Pre-Matric, Post-Matric, Merit-Based"
+    },
+    "agriculture": {
+      "title": "Agriculture",
+      "description": "Farmer Support, Crop Insurance"
+    },
+    "all": {
+      "title": "Find All Schemes",
+      "description": "Check eligibility across all sectors"
+    }
+  },
+  "conversation": {
+    "placeholder": "Type your message or use voice...",
+    "goBack": "Go Back",
+    "repeat": "Repeat",
+    "help": "Help",
+    "processing": "Let me check that for you...",
+    "understood": "I understand! Let me help you with that.",
+    "yourQuery": "Your Query"
+  },
+  "voiceInput": {
+    "speakIntoMicrophone": "Speak into your microphone...",
+    "clickMicToStart": "Click mic to start",
+    "microphoneBlocked": "Microphone blocked",
+    "fallbackToKeyboard": "Please use keyboard input"
+  },
+  "greeting": {
+    "welcome": "Namaste! Welcome to Jan-Sahayak. How can I help you today?"
+  },
+  "footer": {
+    "whatsapp": "WhatsApp",
+    "tollfree": "Toll-Free",
+    "privacy": "Your data is encrypted and secure"
+  },
+  "languages": {
+    "en": "English",
+    "hi": "हिंदी",
+    "gu": "ગુજરાતી",
+    "kn": "ಕನ್ನಡ",
+    "bn": "বাংলা"
+  },
+  "landing": {
+    "greeting": "Hello! I am Jan-Sahayak. How can I help you today?",
+    "speak": "Start Talking",
+    "type": "Or type instead",
+    "callIVR": "Call",
+    "whatsapp": "WhatsApp",
+    "sms": "SMS",
+    "howItWorks": "How does it work?"
+  },
+  "questions": {
+    "back": "← Go Back",
+    "next": "Next →",
+    "loading": "Finding schemes for you...",
+    "step1Label": "Location",
+    "step2Label": "Work",
+    "step3Label": "Income",
+    "step4Label": "Land",
+    "step5Label": "Family",
+    "q1": { 
+      "question": "Where do you live? Please tell us your state.",
+      "placeholder": "Enter your state (e.g., Gujarat, Karnataka)"
+    },
+    "q2": {
+      "question": "What do you do for work?",
+      "farmer": "Farmer", "worker": "Worker", "student": "Student",
+      "business": "Business", "women": "Women Group", "disabled": "Disabled",
+      "pensioner": "Pensioner", "other": "Other"
+    },
+    "q3": {
+      "question": "What is your household's annual income?",
+      "none": "No Income",
+      "lt1": "Less than ₹1 Lakh", "1to3": "₹1 Lakh – ₹3 Lakh", "gt3": "More than ₹3 Lakh"
+    },
+    "q4": {
+      "question": "How much land do you have?",
+      "label": "Land in Bigha"
+    },
+    "q5": {
+      "question": "How old are you? How many people live in your home?",
+      "age": "Age (years)", "members": "Family Members", "submit": "Find Schemes"
+    }
+  }
+  ,
+  "results": {
+    "headline": "You are eligible for {{count}} schemes! 🎉",
+    "applyNow": "Apply to Top Scheme First",
+    "share": "Share on WhatsApp",
+    "download": "Download PDF",
+    "online": "Apply Now",
+    "offline": "How to Get",
+    "required_docs": "Required Documents",
+    "steps": "How to Apply",
+    "portal": "Open Official Portal",
+    "csc": "Nearest CSC Center",
+    "helpline": "Helpline"
+  }
+}

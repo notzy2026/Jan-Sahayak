@@ -1,0 +1,78 @@
+{
+  "app": { "title": "जन-सहायक", "tagline": "आपका कल्याण साथी" },
+  "home": {
+    "welcome": "जन-सहायक में आपका स्वागत है",
+    "subtitle": "आवाज या टेक्स्ट के माध्यम से कल्याण योजनाओं की खोज करें",
+    "startVoice": "आवाज से शुरू करें",
+    "startText": "टेक्स्ट से शुरू करें"
+  },
+  "landing": {
+    "greeting": "नमस्ते! मैं जन-सहायक हूँ। आपकी क्या मदद कर सकता हूँ?",
+    "speak": "बात करें",
+    "type": "या टाइप करें",
+    "callIVR": "कॉल करें",
+    "whatsapp": "WhatsApp",
+    "sms": "SMS",
+    "howItWorks": "यह कैसे काम करता है?"
+  },
+  "questions": {
+    "back": "← पीछे जाएं",
+    "next": "आगे →",
+    "loading": "आपके लिए योजनाएं खोज रहे हैं...",
+    "step1Label": "स्थान", "step2Label": "काम", "step3Label": "आय", "step4Label": "जमीन", "step5Label": "परिवार",
+    "q1": { "question": "आप कहाँ रहते हैं? अपना राज्य बताएं।", "placeholder": "अपना राज्य दर्ज करें" },
+    "q2": {
+      "question": "आप क्या काम करते हैं?",
+      "farmer": "किसान", "worker": "मजदूर", "student": "छात्र",
+      "business": "व्यापारी", "women": "महिला समूह", "disabled": "दिव्यांग",
+      "pensioner": "पेंशनर", "other": "अन्य"
+    },
+    "q3": {
+      "question": "आपके घर में साल भर में कितना पैसा आता है?",
+      "none": "कोई आय नहीं",
+      "lt1": "₹1 लाख से कम", "1to3": "₹1 लाख – ₹3 लाख", "gt3": "₹3 लाख से अधिक"
+    },
+    "q4": { "question": "आपके पास कितनी जमीन है?", "label": "बीघा में जमीन" },
+    "q5": { "question": "आपकी उम्र कितनी है? और घर में कितने लोग हैं?", "age": "उम्र (वर्ष)", "members": "परिवार के सदस्य", "submit": "योजनाएं खोजें" }
+  },
+  "results": {
+    "headline": "आप {{count}} योजनाओं के लिए योग्य हैं!",
+    "applyNow": "अभी Apply करें",
+    "howToGet": "कैसे मिलेगा",
+    "shareWhatsApp": "WhatsApp पर Share करें",
+    "downloadPDF": "PDF Download करें",
+    "share": "WhatsApp पर Share करें",
+    "download": "PDF Download करें",
+    "online": "अभी Apply करें",
+    "offline": "कैसे मिलेगा",
+    "required_docs": "जरूरी दस्तावेज",
+    "steps": "कैसे करें आवेदन",
+    "portal": "ऑफिशियल पोर्टल खोलें",
+    "csc": "नजदीकी CSC केंद्र",
+    "helpline": "हेल्पलाइन"
+  },
+  "nav": {
+    "back": "पीछे जाएं",
+    "next": "आगे बढ़ें",
+    "replay": "दोबारा सुनें"
+  },
+  "languages": {
+    "en": "English", "hi": "हिंदी", "gu": "ગુજરાતી", "kn": "ಕನ್ನಡ",
+    "bn": "বাংলা", "ta": "தமிழ்", "te": "తెలుగు", "mr": "मराठी",
+    "ml": "മലയാളം", "pa": "ਪੰਜਾਬੀ", "or": "ଓଡ଼ିଆ"
+  },
+  "footer": { "whatsapp": "व्हाट्सएप", "tollfree": "टोल-फ्री", "privacy": "आपका डेटा एन्क्रिप्टेड और सुरक्षित है" },
+  "greeting": { "welcome": "नमस्ते! जन-सहायक में आपका स्वागत है। मैं आपकी कैसे मदद कर सकता हूँ?" },
+  "conversation": {
+    "placeholder": "अपना संदेश टाइप करें...",
+    "goBack": "वापस जाएं", "repeat": "दोहराएं", "help": "मदद",
+    "processing": "मैं आपके लिए देख रहा हूँ...",
+    "understood": "मैं समझ गया!", "yourQuery": "आपका सवाल"
+  },
+  "voiceInput": {
+    "speakIntoMicrophone": "माइक्रोफोन में बोलें...",
+    "clickMicToStart": "शुरू करने के लिए माइक पर क्लिक करें",
+    "microphoneBlocked": "माइक्रोफोन ब्लॉक है",
+    "fallbackToKeyboard": "कृपया कीबोर्ड का उपयोग करें"
+  }
+}

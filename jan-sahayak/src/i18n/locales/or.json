@@ -1,0 +1,59 @@
+{
+  "_TODO": "Odia translation — placeholder from English. Full translations to be added.",
+  "app": { "title": "ଜନ-ସହାୟକ", "tagline": "ଆପଣଙ୍କ କଲ୍ୟାଣ ସାଥୀ" },
+  "landing": {
+    "greeting": "ନମସ୍କାର! ମୁଁ ଜନ-ସହାୟକ। ଆପଣଙ୍କୁ କ'ଣ ସାହାଯ୍ୟ କରିବି?",
+    "speak": "କଥା ହୁଅନ୍ତୁ",
+    "type": "କିମ୍ବା ଟାଇପ୍ କରନ୍ତୁ",
+    "callIVR": "କଲ୍ କରନ୍ତୁ",
+    "whatsapp": "WhatsApp",
+    "sms": "SMS",
+    "howItWorks": "ଏହା କିପରି କାମ କରେ?"
+  },
+  "questions": {
+    "back": "← ପଛକୁ",
+    "next": "ଆଗକୁ →",
+    "loading": "ଆପଣଙ୍କ ପାଇଁ ଯୋଜନା ଖୋଜୁଛୁ...",
+    "step1Label": "ସ୍ଥାନ", "step2Label": "କାମ", "step3Label": "ଆୟ", "step4Label": "ଜମି", "step5Label": "ପରିବାର",
+    "q1": { "question": "ଆପଣ କେଉଁଠି ରୁହନ୍ତି? ଆପଣଙ୍କ ରାଜ୍ୟ ବୁଝନ୍ତୁ।" },
+    "q2": {
+      "question": "ଆପଣ କ'ଣ କାମ କରନ୍ତି?",
+      "farmer": "ଚାଷୀ", "worker": "ଶ୍ରମିକ", "student": "ଛାତ୍ର",
+      "business": "ବ୍ୟବସାୟୀ", "women": "ମହିଳା ଗ୍ରୁପ", "disabled": "ଦିବ୍ୟାଙ୍ଗ",
+      "pensioner": "ପେନ୍ସନ୍ ଭୋଗୀ", "other": "ଅନ୍ୟ"
+    },
+    "q3": {
+      "question": "ଆପଣଙ୍କ ଘରେ ବାର୍ଷିକ କେତେ ଆୟ ଅଛି?",
+      "none": "କୌଣସି ଆୟ ନାହିଁ",
+      "lt1": "₹1 ଲକ୍ଷରୁ କମ୍", "1to3": "₹1 – ₹3 ଲକ୍ଷ", "gt3": "₹3 ଲକ୍ଷରୁ ଅଧିକ"
+    },
+    "q4": { "question": "ଆପଣଙ୍କ ପାଖରେ କେତେ ଜମି ଅଛି?", "label": "ଏକରରେ ଜମି" },
+    "q5": { "question": "ଆପଣଙ୍କ ବୟସ କେତେ? ଘରେ କେତେ ଜଣ ଅଛନ୍ତି?", "age": "ବୟସ", "members": "ପରିବାର ସଦସ୍ୟ", "submit": "ଯୋଜନା ଖୋଜ" }
+  },
+  "results": {
+    "headline": "ଆପଣ {{count}} ଯୋଜନା ପାଇଁ ଯୋଗ୍ୟ!",
+    "applyNow": "ଏବେ ଆବେଦନ କରନ୍ତୁ",
+    "howToGet": "କିଭଳି ପାଇବେ",
+    "shareWhatsApp": "WhatsApp ରେ ଶେୟାର କରନ୍ତୁ",
+    "downloadPDF": "PDF ଡାଉନଲୋଡ଼ କରନ୍ତୁ",
+    "share": "WhatsApp ରେ ଶେୟାର କରନ୍ତୁ",
+    "download": "PDF ଡାଉନଲୋଡ଼ କରନ୍ତୁ",
+    "online": "ଏବେ ଆବେଦନ କରନ୍ତୁ",
+    "offline": "କିଭଳି ପାଇବେ",
+    "required_docs": "ଦରକାରୀ ଦଲିଲ",
+    "steps": "ଆବେଦନ ପ୍ରକ୍ରିୟା",
+    "portal": "ଅଧିକୃତ ପୋର୍ଟାଲ ଖୋଲନ୍ତୁ",
+    "csc": "ନିକଟ CSC କେନ୍ଦ୍ର",
+    "helpline": "ହେଲ୍ପଲାଇନ"
+  },
+  "nav": { "back": "ପଛକୁ", "next": "ଆଗକୁ", "replay": "ପୁଣି ଶୁଣନ୍ତୁ" },
+  "languages": {
+    "en": "English", "hi": "हिंदी", "gu": "ગુજરાતી", "kn": "ಕನ್ನಡ",
+    "bn": "বাংলা", "ta": "தமிழ்", "te": "తెలుగు", "mr": "मराठी",
+    "ml": "മലയാളം", "pa": "ਪੰਜਾਬੀ", "or": "ଓଡ଼ିଆ"
+  },
+  "footer": { "whatsapp": "WhatsApp", "tollfree": "ଟୋଲ-ଫ୍ରୀ", "privacy": "ଆପଣଙ୍କ ତଥ୍ୟ ସୁରକ୍ଷିତ" },
+  "greeting": { "welcome": "ନମସ୍କାର! ଜନ-ସହାୟକ ଆସନ୍ତୁ।" },
+  "conversation": { "placeholder": "ଆପଣଙ୍କ ସଂଦେଶ ଲେଖନ୍ତୁ...", "goBack": "ପଛକୁ", "repeat": "ପୁଣି", "help": "ସାହାଯ୍ୟ", "processing": "ଖୋଜୁଛୁ...", "understood": "ବୁଝିଲି!", "yourQuery": "ଆପଣଙ୍କ ପ୍ରଶ୍ନ" },
+  "voiceInput": { "speakIntoMicrophone": "ମାଇକ୍ ରେ କଥା ହୁଅନ୍ତୁ...", "clickMicToStart": "ମାଇକ ଦବାନ୍ତୁ", "microphoneBlocked": "ମାଇକ ବ୍ଲକ ଅଛି", "fallbackToKeyboard": "କୀ-ବୋର୍ଡ ବ୍ୟବହାର କରନ୍ତୁ" }
+}
